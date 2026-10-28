@@ -1,10 +1,11 @@
-import { cp, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, readdir, writeFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 const root = path.resolve(import.meta.dirname, ".."),
   out = path.resolve(root, "output/release"),
   preview = path.join(out, "preview");
+await rm(preview, {recursive:true,force:true});
 await mkdir(preview, { recursive: true });
 const allowed = (source) =>
   !source
@@ -12,6 +13,8 @@ const allowed = (source) =>
     .some(
       (part) =>
         part === "node_modules" ||
+        part === ".npm-cache" ||
+        part === ".cache" ||
         part === "__pycache__" ||
         part === "memory" ||
         (part.startsWith(".env") && part !== ".env.example") ||
@@ -90,6 +93,6 @@ await writeFile(
 );
 await writeFile(
   path.join(out, "README.md"),
-  "# Web 1.3.0\n\n本机预览：http://localhost:3163 。独立副本可运行 `bash START_PREVIEW.sh`；如端口已占用，使用 `PORT=3164 bash START_PREVIEW.sh`。\n\n- `FEATURES.md`：功能与部署说明。模型和运行库随后端一起部署，在浏览器本地推理。\n- `PHONE-ACCEPTANCE.md`、`CAPABILITIES.md`：真实设备待验收项及浏览器限制。\n- `SOURCE-MANIFEST.json`、`SHA256SUMS`、`MODEL-MANIFEST.json`：版本与源码/资源校验。\n\n副本排除了环境文件、凭据、用户数据和依赖安装目录。真实云端对话、车轮和长时间耗电仍需人工测试。\n",
+  "# Web 1.3.0\n\n本机预览：http://localhost:3163 。独立副本可运行 `bash START_PREVIEW.sh`；如端口已占用，使用 `PORT=3164 bash START_PREVIEW.sh`。\n\n- `FEATURES.md`：功能与部署说明。模型和运行库随后端一起部署，在浏览器本地推理。\n- `PHONE-ACCEPTANCE.md`、`CAPABILITIES.md`：真实设备待验收项及浏览器限制。\n- `SOURCE-MANIFEST.json`、`SHA256SUMS`、`MODEL-MANIFEST.json`：版本与源码/资源校验。\n\n副本仅保留环境变量模板，排除了凭据、用户数据、依赖安装目录和缓存。真实云端对话、车轮和长时间耗电仍需人工测试。\n",
 );
 console.log(`${resources.length} files packaged; source ${commit}`);
