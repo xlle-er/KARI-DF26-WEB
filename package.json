@@ -10,7 +10,8 @@
     "build": "node scripts/build-app-shell.mjs",
     "test:ui": "node scripts/verify-web.mjs",
     "test:pwa": "node scripts/verify-pwa.mjs",
-    "build:wasm": "bash scripts/build-wake-wasm.sh"
+    "build:wasm": "bash scripts/build-wake-wasm.sh",
+    "build:icons": "node scripts/build-icons.mjs"
   },
   "engines": {
     "node": ">=22"

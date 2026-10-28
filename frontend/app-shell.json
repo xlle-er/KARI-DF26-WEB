@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0-eb03daa57b23",
+  "version": "1.3.0-8570ed476a9b",
   "resources": [
     {
       "path": "apps.css",
@@ -22,16 +22,36 @@
       "sha256": "e1ea668524a7b9da0b08b752f812641074c5aaeb71862116e9edda9e58b80dfe"
     },
     {
+      "path": "icons/icon-180.png",
+      "sha256": "40b7df00eb6c69315cde64e42027ecd5aeecf34f92915ef71aa5854047bd9ef2"
+    },
+    {
+      "path": "icons/icon-192.png",
+      "sha256": "5c43a3ae7b0e05d623d1eec51d49aa9f7406604ab7164dfd5aad78ede128cc09"
+    },
+    {
       "path": "icons/icon-192.svg",
-      "sha256": "7f04264a8bacbb2f0253a38d90064993c5263aa4143b5320fcb8183c7e7bedc1"
+      "sha256": "db6981251f52efdfd178b38b4007436f1dc6d9ceaa88c5a957460b7bef67c3a5"
+    },
+    {
+      "path": "icons/icon-32.png",
+      "sha256": "b7308a7b73bda16e68cac25afcf9783479bb02c8963b6739d2bd3e1dd20347c1"
+    },
+    {
+      "path": "icons/icon-512.png",
+      "sha256": "b908845830c919ccefbfedeff66692f80fb3c1e402eb0f4edf537f6e78711343"
     },
     {
       "path": "icons/icon.svg",
-      "sha256": "12266a00310b58bd13973c6cfdb3a17fabdacae3c26fea6a6a0daf9186104ade"
+      "sha256": "db6981251f52efdfd178b38b4007436f1dc6d9ceaa88c5a957460b7bef67c3a5"
+    },
+    {
+      "path": "icons/maskable-512.png",
+      "sha256": "b908845830c919ccefbfedeff66692f80fb3c1e402eb0f4edf537f6e78711343"
     },
     {
       "path": "icons/maskable-icon.svg",
-      "sha256": "04b1232db330cd641d882d422502d52e3938a7684f8cd87ee09bfeb265ac3ab8"
+      "sha256": "56a9958a28847085c0d367e13fbd003b2d51d273268a8aca0530890c0d72fed2"
     },
     {
       "path": "idle-scenarios-demo.html",
@@ -39,7 +59,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "f79c6b44ec09f149d7fd6da4297668c4bab612e49dfc4f3389e087763f9a7819"
+      "sha256": "5b2dd87af482ebd1c3bc468d6ddc63b1a802bcf6e4e748ce1f45f6c39456fca7"
     },
     {
       "path": "js/app.js",
@@ -351,7 +371,7 @@
     },
     {
       "path": "manifest.webmanifest",
-      "sha256": "40b71d7e7246bc927c9426f5c8dbe8add8f8c4538b25fd3ee92f3fe44f36b440"
+      "sha256": "032b867a698b65d5ae6e83842ea07c58f46cfc32e6423f9ed676bed67f54ce64"
     },
     {
       "path": "manual-drive-demo.html",

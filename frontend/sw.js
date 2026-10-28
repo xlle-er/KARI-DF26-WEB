@@ -1,5 +1,5 @@
 /* A waiting worker never takes over an active companion session without approval. */
-const BUILD='1.3.0-eb03daa57b23';
+const BUILD='1.3.0-8570ed476a9b';
 const PREFIX = "kari-shell-";
 const versionCache = PREFIX + BUILD;
 self.addEventListener("install", (event) =>

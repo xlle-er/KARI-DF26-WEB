@@ -3,6 +3,10 @@
 > [KARI unified user guide](https://github.com/xlle-er/KARI-DF26) · New application/device identities require a fresh install and configuration. See [current validation](https://github.com/xlle-er/KARI-DF26/blob/main/docs/validation.md) for migration checks and the maintainer’s physical-test confirmation.
 # KARI DF26 Web / 网页端
 
+<p align="center">
+  <img src="docs/assets/app-icon-rounded.png" alt="KARI 图标 / KARI app icon" width="128" height="128">
+</p>
+
 完整中英双语说明与各端仓库链接见 [项目使用文档 / User guide](https://github.com/xlle-er/KARI-DF26)。
 
 Web **1.3.0**：四页面、场景与 Life Engine、离线唤醒及响应式适配见 [功能和部署说明](docs/web-1.3.0/README.md)、[手机验收表](docs/web-1.3.0/PHONE-ACCEPTANCE.md)。模型和运行库随后端部署，浏览器按需下载并本地推理。
