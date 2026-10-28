@@ -1,0 +1,381 @@
+{
+  "version": "1.3.0-eb03daa57b23",
+  "resources": [
+    {
+      "path": "apps.css",
+      "sha256": "3e5036c60b99683e5d7f18342235de5845d6541b985573e5f4a84585a93028fc"
+    },
+    {
+      "path": "apps.html",
+      "sha256": "b0fafe905134ce82beee1fafbc2531ba90becd7aa0f895a12362d885ee974783"
+    },
+    {
+      "path": "dual-camera-demo.html",
+      "sha256": "3205b7f3c6765246e83a38ca8a02d169828cf6d8af392fa55ddb73a16d78a4d2"
+    },
+    {
+      "path": "follow-latency-demo.html",
+      "sha256": "d79abe6912b59c87790a1875965bea2b6a1c19b4b71730d2bd306fc7687fea52"
+    },
+    {
+      "path": "head-pitch-demo.html",
+      "sha256": "e1ea668524a7b9da0b08b752f812641074c5aaeb71862116e9edda9e58b80dfe"
+    },
+    {
+      "path": "icons/icon-192.svg",
+      "sha256": "7f04264a8bacbb2f0253a38d90064993c5263aa4143b5320fcb8183c7e7bedc1"
+    },
+    {
+      "path": "icons/icon.svg",
+      "sha256": "12266a00310b58bd13973c6cfdb3a17fabdacae3c26fea6a6a0daf9186104ade"
+    },
+    {
+      "path": "icons/maskable-icon.svg",
+      "sha256": "04b1232db330cd641d882d422502d52e3938a7684f8cd87ee09bfeb265ac3ab8"
+    },
+    {
+      "path": "idle-scenarios-demo.html",
+      "sha256": "cd306d5bd9788a2ae68810329f97eae8699e1a1f1a328c2f2539d13a110230b3"
+    },
+    {
+      "path": "index.html",
+      "sha256": "f79c6b44ec09f149d7fd6da4297668c4bab612e49dfc4f3389e087763f9a7819"
+    },
+    {
+      "path": "js/app.js",
+      "sha256": "d38fe350108cd0edc7e508606c3bbf02959372f67893220f1d9ae495b0c67226"
+    },
+    {
+      "path": "js/audio/wakePhraseDetector.js",
+      "sha256": "a7fabfe0f235fb9bdd955db2cd5a73b7e0231e81a8e4b86f3fe2cba1ff7ae414"
+    },
+    {
+      "path": "js/companion/audio.js",
+      "sha256": "e9115c21ed28638c1e6be4a414f84a1357d652fffa65909fe923051be643fe4f"
+    },
+    {
+      "path": "js/companion/configuration.js",
+      "sha256": "b7a76ab81f7ee02a9bdea85589ab972a0dd7e9736980ddfcf424cfb63dc38d6f"
+    },
+    {
+      "path": "js/companion/pcm-worklet.js",
+      "sha256": "3fb4e174f6aad8a57e801a101a3827443f176ab5ece11f7e4ab2441ada709440"
+    },
+    {
+      "path": "js/companion/policies.js",
+      "sha256": "ac5cb2ca42a24a51812849f050ca5257bf9d414edb27a64799685745db24be79"
+    },
+    {
+      "path": "js/companion/resources.js",
+      "sha256": "7a1702be934e3b74e2cddff0ccdd7fb154be06fdcef677116ff9db1bc3cb886b"
+    },
+    {
+      "path": "js/companion/runtime.js",
+      "sha256": "15ed7567d834a2b55b54c48e579358bb468fc327af0c44a9831dac4dab6b59f6"
+    },
+    {
+      "path": "js/companion/shell.js",
+      "sha256": "b5f596ab32b647abfa06f4895df929cf4d4b72b097123194adb9aca7a0b1308f"
+    },
+    {
+      "path": "js/companion/vision-worker-source.js",
+      "sha256": "e835337c80ccae39cf646a00ef8c20cf9fdbebc87d025d5147df3ca349a441f6"
+    },
+    {
+      "path": "js/companion/vision-worker.js",
+      "sha256": "c10c40015be1a0f85c48a7a5e1499254bafd57a92b8ae1d96d7bbb54532043a4"
+    },
+    {
+      "path": "js/companion/wake-worker.js",
+      "sha256": "f0ac25f25dd278a5f641aed0749df4f9f386cf4ac401616b6fa91dd68759ef7e"
+    },
+    {
+      "path": "js/config.js",
+      "sha256": "b8859c241d0e5a6e2aaecda18bc90fdcded58d6256d386121ef09ab47491188c"
+    },
+    {
+      "path": "js/core/apiBase.js",
+      "sha256": "b5888b6facb18c29591688b8e3740fb7b13437c2646c13fb347e3912c777763f"
+    },
+    {
+      "path": "js/core/localEventBus.js",
+      "sha256": "73e99943b7dc495a9ab75eb8b3cbdb0b0d2ebef4452c9f0330437236b95b4530"
+    },
+    {
+      "path": "js/core/runtimeUtils.js",
+      "sha256": "ede4141da2085f3926c1975bde0f211c8d78ac4f33df00c54ea71424b5e8d6f6"
+    },
+    {
+      "path": "js/device/commands.js",
+      "sha256": "8cb9338d5e72bf673947135648a2f11bc41b3e56d652070fe5075df9fc7233de"
+    },
+    {
+      "path": "js/device/credentials.js",
+      "sha256": "2e198f2976a30b265ef3634dfe9e0af061c05a590bbf79424c98cd9fe226dc76"
+    },
+    {
+      "path": "js/device/firmwareCache.js",
+      "sha256": "d3b2ff09efb9e8fe5d4dfc7eb0df8891da1479172939c7743b560650fcadb2fe"
+    },
+    {
+      "path": "js/device/management.js",
+      "sha256": "82465e807523cb5fa5aecdbd434ac9eed43959c9c3a7c442d26883eca8e7006a"
+    },
+    {
+      "path": "js/device/networkClient.js",
+      "sha256": "abccb38547af50774feb8ab022add0c1916f61a247143182d9b7fa4ec7e5dde3"
+    },
+    {
+      "path": "js/device/scenarioMigration.js",
+      "sha256": "d82b9dc893ffed8d02285dd4aa4ff2c4a087ed8eccf3a660c30a7a86cebb8fcb"
+    },
+    {
+      "path": "js/device/sha256.js",
+      "sha256": "9f721fc29bc8e8a0fa4376e7d9aaafcc3d80de8ea53721833f6507b20182119f"
+    },
+    {
+      "path": "js/device/updatePolicy.js",
+      "sha256": "8747d34ad661dcc064dbbf0665f99d4a9ed75ebf2380636ef07d845f44413fb4"
+    },
+    {
+      "path": "js/device/updateSession.js",
+      "sha256": "e81121fb6c3517afcad18f00bfcbc2e44105fc1cc6e579ff9e99abbc606465eb"
+    },
+    {
+      "path": "js/embodiment/embodiedActionRouter.js",
+      "sha256": "ee2f07177a4d2d75442d87d6ebbb3fb8b7a7791591d0e1aac25d0dcca191129c"
+    },
+    {
+      "path": "js/embodiment/movementCatalog.js",
+      "sha256": "e7cd9942e81c1a872da917cc0d5a95713eb7d5aab10bdebf42213ced0b76e2d0"
+    },
+    {
+      "path": "js/embodiment/priorityScheduler.js",
+      "sha256": "740514b2bfa31376e39a0d0e30ff98313fd767b9e7ea3f8a1710e51948eae3a6"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/angryActions.js",
+      "sha256": "4cce8ff98fb7c0a1158cc45af153e814d7a5349a8a215b2996dee784cc27aca0"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/drinkingActions.js",
+      "sha256": "f79d135fc3bc44ae304c68f3375050de570ff1fa3ab4bae62ee5f0ca49df8a31"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/eatingActions.js",
+      "sha256": "ec8d32a3ca273a3a8749a72dbd1be9e4eac45bf79c0459acd4b43189906412f6"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/kissActions.js",
+      "sha256": "109059106a5ccf02b34b4d3eb64ca1332099784fa16165c3e363e7274169affb"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/lovingActions.js",
+      "sha256": "f2cfc69d1102d71c9addd76b8efc6adf91987b048c23e105dc0ee5c9bee15334"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/photoPoseAndCapture.js",
+      "sha256": "1b422e619ecb29a4d375564adc76b4a101aa7fc0899932186b72d5e9328cfa55"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/questionActions.js",
+      "sha256": "35e846182dafb93d325fe69052c911d6173f1d7dc5f44fd63cb194cb36421fe4"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/shockedActions.js",
+      "sha256": "517c99cc031f181d15bd79c8bec0bfb3d9628128072e5a16a7e57044da0daf84"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/tellMeAboutYourselfActions.js",
+      "sha256": "e0b6a252115917f76e98b00b3fa335df4dd91a173318e0a77c255ab32009002d"
+    },
+    {
+      "path": "js/embodiment/scenarioActions/wakeActivationActions.js",
+      "sha256": "77b3b7edf974eac5f91bebd15c3e21cd4edc487bdc5c4c2b1653acdb929246aa"
+    },
+    {
+      "path": "js/embodiment/scenarioCatalog.js",
+      "sha256": "84728c2180fbc404b3a53d35b9d5317516acf6075c04487a2c3978f93a150647"
+    },
+    {
+      "path": "js/embodiment/scenarioFrameSequencer.js",
+      "sha256": "35ab2c107f6facccfde7962142de349ae273522e7ce18d8b26cc43010ec4daf9"
+    },
+    {
+      "path": "js/gemini/geminiLiveRuntime.js",
+      "sha256": "6ea3b18d919a50f182c8d01b836a02706fb4d819c3aacfe624c39925a4b2a397"
+    },
+    {
+      "path": "js/gemini/geminiLiveTools.js",
+      "sha256": "83a6b966ad86db063328b3049656f08b9fec7b4f751434a6876e0a0a84f65a73"
+    },
+    {
+      "path": "js/idle/idleScenarioCatalog.js",
+      "sha256": "368c1ee0a994974af2cea0f6c43ffcd3df4f9a581568c0548f952f998806bbab"
+    },
+    {
+      "path": "js/idle/idleScenarioScheduler.js",
+      "sha256": "b0bbd128065d349ff32f0c17eb186e0f293840a19fadecca726a8abc65b12e8f"
+    },
+    {
+      "path": "js/life/lifeEngine.js",
+      "sha256": "b044185a103f2ce8053263b4d2734722737f8e27a3ecd0bda3d72336cc325a3b"
+    },
+    {
+      "path": "js/life/safetyGate.js",
+      "sha256": "b540db181218e93dc7a863a670430256f9a7bd33fcfa1f156d2ef8bb320669c7"
+    },
+    {
+      "path": "js/life/state.js",
+      "sha256": "e9648183dcc7966fb82bd8f7d1fed34a7a6f71eae5cdf1754ef3736b77f23bd3"
+    },
+    {
+      "path": "js/localBrain/actionParser.js",
+      "sha256": "8bd29730ac699e83b3dd71d49d91de3b6cc30da93fe5d17974a15c52f7d2229a"
+    },
+    {
+      "path": "js/localBrain/attentionSystem.js",
+      "sha256": "1091b1bf83ffa9db6f748f63288ddb69a3e2d1508af7ab7b3ad7bb928663b082"
+    },
+    {
+      "path": "js/localBrain/brainLatencyBudget.js",
+      "sha256": "025e1875dc0f94687eb4b3b7aa75bd195cd3f10f5ff0d7bdaa201dc0043ee483"
+    },
+    {
+      "path": "js/localBrain/brainPolicy.js",
+      "sha256": "2b6b74597c94ed08aa707c903a32aa202b3588bb09e7a98f0537bc7d74ef3edb"
+    },
+    {
+      "path": "js/localBrain/localBrainEngine.js",
+      "sha256": "c61bc62112c75280d4e4bde8650aa95d28d56f3871b4efadf3fd3889af20dcf9"
+    },
+    {
+      "path": "js/localBrain/localServerBrainAdapter.js",
+      "sha256": "771e89ce2bff7e5043a4eed9bceaf60ef1082edd241e6f80fd81099ef5ecb4e4"
+    },
+    {
+      "path": "js/localBrain/mockBrainAdapter.js",
+      "sha256": "13e96aba1afb2e9c63d9bc58dc685d7317bd4cbc0eabb6a8ef4c8bc30d2c6841"
+    },
+    {
+      "path": "js/localBrain/ruleBrainFallback.js",
+      "sha256": "0b450397ea37bd66bdb9cf8afd03e7c11c5d1c58edec39a5b8c72549c876f744"
+    },
+    {
+      "path": "js/perception/camera.js",
+      "sha256": "adf2eba3720e0e6b023e3680392960ca8cf20c34b2467f905cf11fb6e1894525"
+    },
+    {
+      "path": "js/personality/lifeEvents.js",
+      "sha256": "2a791bd2240daad3d531d5e951426d78486e248e63ba6d2ba44574127ee32cb7"
+    },
+    {
+      "path": "js/personality/personalityProfile.js",
+      "sha256": "25fd7bb3bc5eda175f386a55f972983dcb5e98e8ce19aafce0521777e2791fe3"
+    },
+    {
+      "path": "js/personality/personalityTuning.js",
+      "sha256": "22052d03704b95610139c443654b4422df6a6f6c364a1bee7094d9b7d5f25dbf"
+    },
+    {
+      "path": "js/pwa.js",
+      "sha256": "2cc7c1b61942a59ad4864f6d06f845736681efc9a7a91f659976367fbf337038"
+    },
+    {
+      "path": "js/robot/bodyCalibration.js",
+      "sha256": "3f465f5198252e811412ad06e4cd7cc9fd599da485d6be4fe397c6d7bb3af4c0"
+    },
+    {
+      "path": "js/robot/commandQueue.js",
+      "sha256": "de2369ff81553f6aa1f6b85f11cb30672c7372224d01b3fc0b03183bca04f3d7"
+    },
+    {
+      "path": "js/robot/esp32Client.js",
+      "sha256": "77174154649eb116e0f0b33398ef6b65eebbe5430c1fdcf5aae2dccc39b7bded"
+    },
+    {
+      "path": "js/robot/toolExecutor.js",
+      "sha256": "d58c7e4d639a440229ceee02cd2a12df020793996021628acd26d0f6c3f7720f"
+    },
+    {
+      "path": "js/runtime/performanceMonitor.js",
+      "sha256": "f603ebf711c3be9da94432e1ce002002b2540ae5898f0a1a6f357e7b6c484f5d"
+    },
+    {
+      "path": "js/runtime/reliabilityManager.js",
+      "sha256": "9aec35b8b986e2e21151c9cf3e2107fd48aaa1bbe957e1f98b21fbf2c9cb7658"
+    },
+    {
+      "path": "js/runtime/wakeLockManager.js",
+      "sha256": "abe23efad77406449886166f92c21a11355f9a76c9772c8c1c72c651e9a46a42"
+    },
+    {
+      "path": "js/ui/faceCanvas.js",
+      "sha256": "1eca36ac7cffeb0dab844b3cf1d8c9c3ae13d70548e147eabcdce3cfe1127719"
+    },
+    {
+      "path": "js/ui/locale.js",
+      "sha256": "a53081065092ce1813174d86c1b7ce2b4ab86d245f7fc675f87420c74a330714"
+    },
+    {
+      "path": "js/ui/settingsNavigation.js",
+      "sha256": "e9a97d4a573bb60fb3e886ba35a09eea0fc84f48433a5882eaf876f847fa4696"
+    },
+    {
+      "path": "js/vision/followTargetController.js",
+      "sha256": "6ff5db9c4eda704c9465c1dc0b44da1a8f20c6c6f48b701af2b04d8e745ec8eb"
+    },
+    {
+      "path": "js/vision/objectDetectorEngine.js",
+      "sha256": "3486a4b5c7eedf9d37644c8320915e46c49b766282f7d88c0d177df4c1e473dc"
+    },
+    {
+      "path": "js/vision/objectLabelUtils.js",
+      "sha256": "0a63d4a0dadf3c71110325323146046c6601f3cba1464dcebceb6aa3a52359da"
+    },
+    {
+      "path": "js/vision/objectTracker.js",
+      "sha256": "d6de1777688bf387b6ab052c96f5f7deac3fefef47c9916648e3c7d7a30e284d"
+    },
+    {
+      "path": "js/vision/visionMetadataBuilder.js",
+      "sha256": "0ababdb884307078ee2ea7bf6fcd3778961d2c2f13193e80481fe6ded9f9217d"
+    },
+    {
+      "path": "js/vision/visionScenarioManager.js",
+      "sha256": "fcee9ded03a6d9a26fa407638bac610affa5f86df38d6719f2052ca0981701c9"
+    },
+    {
+      "path": "js/vision/visionState.js",
+      "sha256": "5528fab96067be170836cb98bdd85779c74c4896d529119aa8ce4e1b3bf4f6cf"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "sha256": "40b71d7e7246bc927c9426f5c8dbe8add8f8c4538b25fd3ee92f3fe44f36b440"
+    },
+    {
+      "path": "manual-drive-demo.html",
+      "sha256": "999ccff1616d35e10c171958a39f85885db4fe6f5efa1b6388be5365a95e7e1e"
+    },
+    {
+      "path": "models/default-companion.json",
+      "sha256": "ea61ee247a21f3189847ba63cdd87597aeeb57451c1b1a4b52fc37edd2e7df08"
+    },
+    {
+      "path": "models/idle-scenes.json",
+      "sha256": "460fd05e39e29c20bc84f8aebace6177437bbf14161f3010926b470e4d46f5fe"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "57867043237178d47a7b0e9c654ad4b6e7a7c930183e89df7ed31dcac487c909"
+    },
+    {
+      "path": "wake-phrase-demo.html",
+      "sha256": "ee3a9b9c3d45245b6397c3a7d850d43ba7a096913d3cefb1738f5bc9688f1db4"
+    },
+    {
+      "path": "workspace.css",
+      "sha256": "b5b6f9546396f0f185978dde6da3b7f3747af9c66451cb60002fcd517eec48b9"
+    }
+  ]
+}
