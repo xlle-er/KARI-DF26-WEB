@@ -3,7 +3,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 const root = path.resolve(import.meta.dirname, ".."),
-  out = path.resolve(root, "output/verification"),
+  out = path.resolve(root, "output/release"),
   preview = path.join(out, "preview");
 await mkdir(preview, { recursive: true });
 const allowed = (source) =>
@@ -14,7 +14,7 @@ const allowed = (source) =>
         part === "node_modules" ||
         part === "__pycache__" ||
         part === "memory" ||
-        part.startsWith(".env") ||
+        (part.startsWith(".env") && part !== ".env.example") ||
         part.endsWith(".log") ||
         part === ".DS_Store",
     );
