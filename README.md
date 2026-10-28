@@ -1,10 +1,13 @@
 > [KARI 统一使用文档](https://github.com/xlle-er/KARI-DF26) · 本次为新应用身份与新设备配置，需要重新安装和配置。当前验证结果见 [KARI 验证状态](https://github.com/xlle-er/KARI-DF26/blob/main/docs/validation.md)，历史验证不计入本次通过项。
 
+> [KARI unified user guide](https://github.com/xlle-er/KARI-DF26) · New application/device identities require a fresh install and configuration. See [current validation](https://github.com/xlle-er/KARI-DF26/blob/main/docs/validation.md) for migration checks and the maintainer’s physical-test confirmation.
 # KARI DF26 Web / 网页端
 
 完整中英双语说明与各端仓库链接见 [项目使用文档 / User guide](https://github.com/xlle-er/KARI-DF26)。
 
 Web **1.3.0**：四页面、场景与 Life Engine、离线唤醒及响应式适配见 [功能和部署说明](docs/web-1.3.0/README.md)、[手机验收表](docs/web-1.3.0/PHONE-ACCEPTANCE.md)。模型和运行库随后端部署，浏览器按需下载并本地推理。
+
+**语言 / Language:** [简体中文](#简体中文) · [English](#english)
 
 ## 简体中文
 
@@ -28,6 +31,8 @@ npm run smoke:tools
 ```
 
 ## English
+
+Web **1.3.0** adds responsive pages, scenes, a Life Engine and offline wake. See the [feature/deployment guide](docs/web-1.3.0/README.md) and [phone acceptance](docs/web-1.3.0/PHONE-ACCEPTANCE.md). Models and runtimes deploy with the backend, download on demand and infer in the browser.
 
 Use Node.js 22 or newer. Run `npm ci` and `npm start` inside `backend`, then open `http://localhost:3000`. Device management is accessible from the initial page without starting camera or AI.
 

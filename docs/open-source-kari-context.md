@@ -1,3 +1,11 @@
 # KARI 源码说明
 
+**语言 / Language:** [简体中文](#简体中文) · [English](#english)
+
+## 简体中文
+
 本仓库由维护者当前有效开发快照建立全新历史。各模块独立维护，统一使用入口见 https://github.com/xlle-er/KARI-DF26 。第三方许可保留在随附声明中；改名不改变原有权利归属。
+
+## English
+
+This repository starts a fresh history from the maintainer's effective development snapshot. Modules are maintained independently; the unified usage entry is https://github.com/xlle-er/KARI-DF26 . Third-party terms remain in the accompanying notices. Renaming does not change ownership or grant new rights.

@@ -82,6 +82,12 @@ await copy(
   path.join(root, "node_modules/@mediapipe/tasks-vision/README.md"),
   "licenses/mediapipe-README.md",
 );
+// Keep the upstream README intact and append the maintained bilingual companion.
+const readmePath = path.join(out, "licenses/mediapipe-README.md");
+const translationMarker = "\n\n<!-- KARI-maintained bilingual companion; upstream text above is unchanged. -->\n\n";
+const upstreamReadme = (await readFile(readmePath, "utf8")).split(translationMarker)[0].trimEnd();
+const translatedReadme = await readFile(path.join(root, "docs/mediapipe-readme-translation.md"), "utf8");
+await writeFile(readmePath, upstreamReadme + translationMarker + translatedReadme.trimEnd() + "\n");
 await copy(
   path.join(workspace, "KARI-DF26-ANDROID/docs/wake-upstream-model-card.md"),
   "licenses/wake-model-card.md",

@@ -1,5 +1,11 @@
 # Web 1.3.0 本地验收版
 
+**语言 / Language:** [简体中文](#简体中文) · [English](#english)
+
+## 简体中文
+
+> 本文保留原版本功能/自动验收基线；当前正式发布、构建号和维护者真机确认见[统一验证记录](https://github.com/xlle-er/KARI-DF26/blob/main/docs/validation.md)。历史“待测”不代表最新总体验收状态。
+
 本次只更新 Web DF26。用户已授权在最终自动核验通过后直接推送 DF26。推送与部署状态以交付目录发布记录为准；真实手机项目独立记录，不创建额外 Release。
 
 ## 已实现
@@ -70,3 +76,75 @@ PORT=3163 npm start
 - Web Bluetooth 能力边界：<https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API>
 
 引擎、模型和 MediaPipe 使用各自 Apache-2.0 条款，ONNX Runtime 使用 MIT；具体第三方许可和声明随 `backend/local-resources/licenses/` 提供。原始眼睛、动作与其他既有代码保留原许可。
+
+## English
+
+This document records the Web 1.3.0 implementation/acceptance baseline. Current KARI stable publication and maintainer-confirmed physical tests are recorded in the [unified validation log](https://github.com/xlle-er/KARI-DF26/blob/main/docs/validation.md). Historical automation is not a substitute for on-device testing.
+
+### Implemented
+
+| Area | Entry and behavior |
+| --- | --- |
+| Responsive UI | Robot, Personality, Vision, Settings; phone bottom bar, medium/desktop sidebar, compact short-landscape sidebar; center play is an action |
+| Companion | Hides setup, preserves original eyes, tap reveals controls; upper-right stop follows controls; focused input keeps controls visible |
+| Robot | BLE/LAN, aliases/device management, direction calibration, provisioning, OTA; remote supports hold/joystick and blur stop |
+| Personality | Identity, eight traits, behavior and language style; save/reset; strict personality and cross-platform companion JSON; failure preserves values |
+| Shared config | schemaVersion=1 profile/behavior/idle/wake round-trips with mobile defaults; safety constraints remain enabled |
+| Web backup | Separate from shared config; advanced local values without keys/device credentials/IDs; validate fully before importing |
+| Behavior | One automation entry; 6 expressions/11 body scenes, weights/cooldowns/states/multipliers; body idle off by default |
+| Advanced settings | Existing tuning and one-shot tests; optional intervals override shared ranges; balanced/reverse pairing affects the next candidate but respects cooldown/permission |
+| Life Engine | Existing engine uses monotonic elapsed time; background pauses without catch-up; resets each new session; boxes do not imply distance/obstacles/identity |
+| Proactive AI | Thought/expression separately off; thought serialized, default 2/minute; expression at least 60 s apart; allowlisted scene suggestions only; stale results discarded |
+| Detection | MediaPipe Tasks Vision 0.10.32, EfficientDet-Lite0 int8; Worker, one inference at a time, at most 10 Hz; off by default |
+| Experimental follow | Explicit target and reference area; 14% horizontal threshold, area hysteresis 0.8/0.95, 150 ms pulses, 300 ms expiry; no automatic reverse/retarget/resume |
+| Offline wake | sherpa-onnx 2.0.0 single-thread SIMD WASM, bilingual presets, shared AudioWorklet 16 kHz; off by default, Gemini Live only |
+| Wake handoff | No Live/media uplink while waiting; about 1 s pre-roll and max 8 s connection buffer; one ordered transfer after readiness; overflow clears all and requests repetition |
+| Recovery | Component failures preserve companionship with reasons/retry; background/interruption stops media, explicit resume |
+| Models/runtimes | Deploy with backend; on-demand download, SHA-256, Cache API, cancel/release/clear; inference stays in browser |
+| PWA | Fully verify new resources, wait for confirmation, stop before switching; cached UI/local models work offline, cloud AI does not |
+| Diagnostics | 500 events/100 decisions, at most 1 Hz; scenes/wake/buffers/follow/motion owners/playback; redacted export |
+
+### Run locally
+
+Node.js 22 or later, at repository root:
+
+```sh
+npm ci
+npm --prefix backend ci
+npm test
+npm run check
+npm run build
+PORT=3163 npm start
+```
+
+Desktop preview: `http://localhost:3163`. Historical preview/screenshots/results were under `output/web/1.3.0/`; current packaging writes `output/release/`. These outputs are local, not source-controlled production deployment evidence.
+
+Phone microphone, camera and Web Bluetooth require browser support, permission and a trusted secure context. Ordinary LAN HTTP is not equivalent to HTTPS acceptance. A source push alone does not establish frontend/backend production deployment.
+
+### Resources and deployment
+
+- `frontend/` is the Netlify static role, retaining eyes/modules. The Node backend deploys with `backend/local-resources/`, including models, runtimes and licenses.
+- Manifest: `GET /api/local-models/manifest.json`; assets: models/..., vendor/... and licenses/... under `/api/local-models/`.
+- `runtime-config.js` points to the backend. Public resource endpoints support CORS and expose no AI keys.
+- Ordinary companionship does not prefetch models. First offline use requires prior caching; fully cached resources can work while the backend is unavailable.
+- `npm run resources` rebuilds detection Worker/hashes from committed resources, optionally synchronizing a sibling Android model; a sibling is not required when committed assets exist.
+- `bash scripts/build-wake-wasm.sh` pins the sherpa source archive/checksum and Emscripten 4.0.23, installs into project temporary directories, strips local paths, and leaves global shell configuration alone.
+- Backend manifests record resource SHA-256, engine/model versions and licenses. WASM does not need cross-origin isolation or a second recorder.
+
+Deploy compatible backend/resources first; check downloads, CORS and the Live relay, then deploy frontend. Keep previous frontend/backend/manifests for coordinated rollback. Source publication is not proof of backend resource deployment.
+
+### Automated results and limits
+
+Counts/browser versions belong to the original JSON reports. Model tests used fixed synthetic bilingual audio and Google's example cat/dog image, not user ambient recordings. Browser automation, fake robots and fake PCM cannot establish listening quality, wheel direction or thermals.
+
+The original local backend had no real Gemini/third-party keys; cloud conversation and recovery require configured HTTPS acceptance. Read current validation separately from this historical automation scope.
+
+### References and licenses
+
+- [MediaPipe Web Object Detector](https://developers.google.com/edge/mediapipe/solutions/vision/object_detector/web_js)
+- [sherpa 2.0.0 WASM build](https://github.com/k2-fsa/sherpa-onnx/blob/v2.0.0/build-wasm-simd-kws.sh)
+- [Bilingual model card](https://modelscope.cn/models/pkufool/icefall-kws-zipformer-zh-en-3M-2025-12-20)
+- [Fixed vision fixture](https://storage.googleapis.com/mediapipe-tasks/object_detector/cat_and_dog.jpg)
+- [Web Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API)
+
+Engines/model/MediaPipe carry their Apache-2.0 terms, ONNX Runtime MIT; exact notices ship in `backend/local-resources/licenses/`. Original eyes/actions/other existing code retain their own licenses.
